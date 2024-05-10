@@ -1,0 +1,19 @@
+<!-- 
+
+Gestione delle Prenotazioni:
+Prenotazione di appuntamenti per i pazienti con i medici.
+Visualizzazione degli appuntamenti prenotati.
+Aggiornamento degli appuntamenti prenotati (ad esempio, modifica della data/ora).
+Cancellazione degli appuntamenti prenotati (se necessario).
+Ricerca degli appuntamenti per paziente, medico, data, ecc.
+
+
+
+
+
+Gestione delle Ricette:
+Emissione di nuove ricette per i pazienti.
+Visualizzazione delle ricette esistenti.
+Aggiornamento delle ricette (ad esempio, aggiunta di farmaci aggiuntivi).
+Cancellazione delle ricette (se necessario).
+Ricerca delle ricette per paziente, medico, data di emissione, ecc. -->
