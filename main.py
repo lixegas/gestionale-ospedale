@@ -6,7 +6,7 @@ from pazienti.wiews import azioni_by_tipo_utente_paziente,visualizza,elimina_paz
 
 
 
-from medici.wiews import azioni_by_tipo_utente_medico,visualizza_medico,aggiorna_datimedico,elimina_medico_w,prenota_paziente
+from medici.wiews import azioni_by_tipo_utente_medico,visualizza_medico,aggiorna_datimedico,elimina_medico_w,prenota
 
 
 
@@ -67,34 +67,37 @@ while True:
         
     elif tipo_utente == "medico":
         azioni_by_tipo_utente_medico()
-
-
-
-
-        OPERAZIONI_MEDICO = ("visualizza","aggiorna","elimina","prenota","ricetta")
-        print(OPERAZIONI_MEDICO)
-    
-    
-    
-    
-        domanda_operazione_medico = input("Quale operazione vuoi eseguire?\n").lower()
         
         
         
-        if domanda_operazione_medico == OPERAZIONI_MEDICO[0]:
-                visualizza_medico()
-        
-        elif domanda_operazione_medico == OPERAZIONI_MEDICO[1]:
-                aggiorna_datimedico()
+        while True:
                 
-        
-        elif domanda_operazione_medico == OPERAZIONI_MEDICO[2]:
-                elimina_medico_w()
-                
+                OPERAZIONI_MEDICO = ("visualizza","aggiorna","elimina","prenotazioni","ricetta")
+                print(OPERAZIONI_MEDICO)
 
-        elif domanda_operazione_medico == OPERAZIONI_MEDICO[3]:
-                prenota_paziente()
-   
+
+                domanda_operazione_medico = input("Quale operazione vuoi eseguire?\n").lower()
+                
+                
+                
+                if domanda_operazione_medico == OPERAZIONI_MEDICO[0]:
+                        visualizza_medico()
+                        break
+                
+                elif domanda_operazione_medico == OPERAZIONI_MEDICO[1]:
+                        aggiorna_datimedico()
+                        break
+                        
+                
+                elif domanda_operazione_medico == OPERAZIONI_MEDICO[2]:
+                        elimina_medico_w()
+                        break
+                        
+
+                elif domanda_operazione_medico == OPERAZIONI_MEDICO[3]:
+                        prenota()
+                        break
+        
 
 
          

@@ -4,12 +4,11 @@ cursor = connessione_db.cursor(dictionary=True)
 
 
 def salva_medico(id_medico, nome_medico_completo, numero_di_telefono, specializzazione, email, password, data_di_nascita_formattata, genere, indirizzo):
-    query = "INSERT INTO medici(id_medico, nome_medico_completo, numero_di_telefono, specializzazione, email, password, data_di_nascita, genere, indirizzo) values(%s,%s,%s,%s,%s,%s,%s,%s)"
+    query = "INSERT INTO medici(id_medico, nome_medico_completo, numero_di_telefono, specializzazione, email, password, data_di_nascita, genere, indirizzo) values(%s,%s,%s,%s,%s,%s,%s,%s,%s)"
     cursor.execute(query,[id_medico, nome_medico_completo, numero_di_telefono, specializzazione, email, password, data_di_nascita_formattata, genere, indirizzo])
     
     connessione_db.commit()
-    
-    #SISTEMARE DATABASE COLLEGMANETO CON TABELLA SPECIALIZZAZIONE, GENERE E TUTTI GLI ALTRI COLLEGAMEN
+  
     
     
 def cerca_by_id_medico(id_medico):
@@ -69,6 +68,16 @@ def aggiorna_password_medico(nuova_password_medico, password_medico_vecchio):
     cursor.execute(query,[nuova_password_medico, password_medico_vecchio])
     
     connessione_db.commit()   
+    
+    
+
+def aggiorna_indirizzo_medico(nuovo_indirizzo_medico,indirizzo_medico_vecchio):
+    
+    query = "UPDATE medici SET indirizzo = (%s) WHERE indirizzo = (%s)"
+    cursor.execute(query,[nuovo_indirizzo_medico,indirizzo_medico_vecchio])
+    
+    connessione_db.commit()   
+    
     
     
     
